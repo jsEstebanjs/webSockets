@@ -1,38 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+}
+.opacity{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container-modal-name-user{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: powderblue;
+  color: black;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 2;
 }
-
-.App-link {
-  color: #61dafb;
+.input-modal-name-user{
+  width: 80%;
+  border-radius: 20px;
+  border: 1px solid black;
+  outline: none;
+  height: 30px;
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-modal-name-user{
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.main-container-live-chat{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.container-live-chat-input{
+  display: flex;
+  flex-direction: column;
+}
+.live-chat-input{
+  width: 90%;
+  border-radius: 20px;
+  border: 1px solid black;
+  outline: none;
+  height: 30px;
+  position: fixed;
+  bottom: 10px;
+  z-index: 1;
+  margin: 0 10px;
+  padding: 10px;
+}
+.live-chat-btn{
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  width: 80px;
+  cursor: pointer;
+  height: 30px;
+  background-color: aqua;
+  border: 1px solid black;
+  z-index: 1;
 }
