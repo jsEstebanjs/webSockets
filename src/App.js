@@ -57,7 +57,7 @@ function App() {
               type="button"
               className="btn-modal-name-user"
             >
-              Guardar
+              Save
             </button>
           </div>
         </>
