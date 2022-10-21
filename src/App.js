@@ -10,7 +10,16 @@ function App() {
   const [allMessage, setAllMessage] = useState([]);
 
   useEffect(() => {
-    ref.current = io("https://websocketsbackend.herokuapp.com/");
+    ref.current = io("https://websocketsbackend.herokuapp.com/" , {
+      withCredentials:true,
+      transportOptions:{
+        polling:{
+          extraHeaders:{
+            "my-custom-header": "abcd"
+          }
+        }
+      }
+    });
 
     ref.current.on("message", (data) => {
       console.log("WELCOME:", data.message);
