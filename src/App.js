@@ -10,9 +10,7 @@ function App() {
   const [allMessage, setAllMessage] = useState([]);
 
   useEffect(() => {
-    ref.current = io("https://websocketsback.herokuapp.com" , {
-      transports: ['websocket', 'polling', 'flashsocket'],
-    });
+    ref.current = io("https://websocketsback.herokuapp.com");
 
     ref.current.on("message", (data) => {
       console.log("WELCOME:", data.message);
