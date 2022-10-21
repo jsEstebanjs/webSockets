@@ -10,14 +10,13 @@ function App() {
   const [allMessage, setAllMessage] = useState([]);
 
   useEffect(() => {
-    ref.current = io("https://websocketbackend.herokuapp.com/");
+    ref.current = io("http://localhost:8080");
 
     ref.current.on("message", (data) => {
       console.log("WELCOME:", data.message);
     });
 
     ref.current.on("broadcast", (data) => {
-      console.log(data);
       setAllMessage((prev) => [...prev, data]);
     });
 
